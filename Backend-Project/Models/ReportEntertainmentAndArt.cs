@@ -14,7 +14,7 @@ namespace Backend_Project.Models
         private string _authorName;
         public ReportEntertainmentAndArt(string Header, string Title, string Description, DateTime Published, bool Modified, bool IsExpired, string AuthorName)
         {
-            _reportType = "Business";
+            _reportType = "EntertainmentAndArt";
             _header = Header;
             _title = Title;
             _description = Description;

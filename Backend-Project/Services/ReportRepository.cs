@@ -31,20 +31,6 @@ namespace Backend_Project.Services
 
         public IEnumerable<Report> GetReports(string reportType)
         {
-            ReportFactory reportFactory=null;
-            Report report=null;
-            switch(reportType.ToLower())
-            {
-                case "Business":
-                reportFactory = new ReportBussinessFactory(report.Header, report.Title, report.Description, report.Published, report.Modified, report.IsExpired, report.AuthorName);
-                report = reportFactory.GetReportType();
-                break;
-                case "Climate":
-                reportFactory = new ReportClimateFactory(report.Header, report.Title,report.Description, report.Published, report.Modified, report.IsExpired, report.AuthorName);
-                break;
-                default:
-                break;
-            }
             var result = _context.Reports.ToList().Where(x => x.ReportType == reportType);
             return result;
         }
