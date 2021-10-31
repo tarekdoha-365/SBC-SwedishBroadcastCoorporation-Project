@@ -7,9 +7,9 @@ namespace Backend_Project.Interfaces
     {
        IEnumerable<Report> GetReports(string reportType);
        Report GetReportById(int Id);
-       int DeleteReport(Report report);
+       Report DeleteReport(int id);
        Report CreateReport (Report report);
-       void SaveChanges();
+       bool SaveChanges();
        Report UpdateReport (Report report);
 
     }
