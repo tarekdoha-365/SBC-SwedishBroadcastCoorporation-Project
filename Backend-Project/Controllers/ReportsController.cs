@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using AutoMapper;
 using Backend_Project.Dtos;
 using Backend_Project.Interfaces;
+using Backend_Project.Models;
 using Backend_Project.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -34,6 +35,16 @@ namespace Backend_Project.Controllers
             if (reportItem != null)
             {
                 return Ok(_mapper.Map<ReportReadDtos>(reportItem));  
+            }
+            return NotFound();
+        }
+        [HttpDelete]
+        public ActionResult <ReportReadDtos> DeleteReport(int id)
+        {
+            if(GetReportById(id)!=null)
+            {
+                var deleteReport = _reportRepo.DeleteReport(id);
+                return Ok(_mapper.Map<ReportReadDtos>(deleteReport));
             }
             return NotFound();
         }

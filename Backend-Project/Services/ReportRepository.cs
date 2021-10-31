@@ -20,9 +20,16 @@ namespace Backend_Project.Services
             throw new System.NotImplementedException();
         }
 
-        public int DeleteReport(Report report)
+        public Report DeleteReport(int id)
         {
-            throw new System.NotImplementedException();
+            var item = _context.Reports.FirstOrDefault(x => x.Id == id);
+            if (GetReportById(id)!=null)
+            {
+                _context.Remove(item);
+                SaveChanges();
+                return item;
+            }
+            return item;
         }
 
         public Report GetReportById(int Id)
@@ -35,9 +42,9 @@ namespace Backend_Project.Services
             return _context.Reports.ToList().Where(x => x.ReportType == reportType);
         }
 
-        public void SaveChanges()
+        public bool SaveChanges()
         {
-            throw new System.NotImplementedException();
+            return _context.SaveChanges() > 0;
         }
 
         public Report UpdateReport(Report report)
