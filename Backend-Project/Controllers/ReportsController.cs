@@ -9,21 +9,33 @@ namespace Backend_Project.Controllers
 {
     [Route("api/[Controller]")]
     [ApiController]
-    public class ReportsController: ControllerBase
+    public class ReportsController : ControllerBase
     {
         private readonly IMapper _mapper;
         private readonly IReport _reportRepo;
 
-        public ReportsController( IReport reportRepo, IMapper mapper)
+        public ReportsController(IReport reportRepo, IMapper mapper)
         {
             _reportRepo = reportRepo;
             _mapper = mapper;
         }
+
         [HttpGet]
-        public ActionResult <IEnumerable<ReportReadDtos>> GetReports(string reportType)
+        public ActionResult<IEnumerable<ReportReadDtos>> GetReports(string reportType)
         {
             var reports = _reportRepo.GetReports(reportType);
-             return Ok(_mapper.Map<IEnumerable<ReportReadDtos>>(reports));
+            return Ok(_mapper.Map<IEnumerable<ReportReadDtos>>(reports));
+        }
+
+        [HttpGet("{id}", Name = "GetReportById")]
+        public ActionResult <ReportReadDtos> GetReportById(int id)
+        {
+            var reportItem = _reportRepo.GetReportById(id);
+            if (reportItem != null)
+            {
+                return Ok(_mapper.Map<ReportReadDtos>(reportItem));  
+            }
+            return NotFound();
         }
     }
 }
