@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Backend_Project.Data;
@@ -26,13 +27,12 @@ namespace Backend_Project.Services
 
         public Report GetReportById(int Id)
         {
-            throw new System.NotImplementedException();
+            return _context.Reports.FirstOrDefault(x => x.Id == Id);  
         }
 
         public IEnumerable<Report> GetReports(string reportType)
         {
-            var result = _context.Reports.ToList().Where(x => x.ReportType == reportType);
-            return result;
+            return _context.Reports.ToList().Where(x => x.ReportType == reportType);
         }
 
         public void SaveChanges()
