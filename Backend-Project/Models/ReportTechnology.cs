@@ -4,7 +4,7 @@ namespace Backend_Project.Models
 {
     class ReportTechnology: Report
     {
-        private readonly string _reportType;
+        private string _reportType;
         private string _header;
         private string _title;
         private string _description;
@@ -24,13 +24,13 @@ namespace Backend_Project.Models
             _authorName = AuthorName;
         }
 
-        public override string ReportType { get => _reportType; }
-        public override DateTime Published { get => _published; set => _published = value; }
-        public override bool Modified { get => _modified; set => _modified = value; }
-        public override bool IsExpired { get => _isExpired; set => _isExpired = value; }
-        public override string AuthorName { get => _authorName; set => _authorName = value; }
-        public override string Header { get => _header; set => _header = value; }
-        public override string Title { get => _title; set => _title = value; }
-        public override string Description { get => _description; set => _description = value; }
+        public string ReportType { get => _reportType; set => _reportType = value; }
+        public DateTime Published { get => _published; set => _published = value; }
+        public bool Modified { get => _modified; set => _modified = value; }
+        public bool IsExpired { get => _isExpired; set => _isExpired = value; }
+        public string AuthorName { get => _authorName; set => _authorName = value; }
+        public string Header { get => _header; set => _header = value; }
+        public string Title { get => _title; set => _title = value; }
+        public string Description { get => _description; set => _description = value; }
     }
 }

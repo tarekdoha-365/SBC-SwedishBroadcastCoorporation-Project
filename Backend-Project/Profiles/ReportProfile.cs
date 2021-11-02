@@ -13,4 +13,5 @@ namespace Backend_Project.Profiles
             CreateMap<ReportCreateDtos, Report>();
         }
     }
+    
 }

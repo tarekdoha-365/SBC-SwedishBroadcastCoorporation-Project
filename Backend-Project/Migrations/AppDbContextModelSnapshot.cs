@@ -51,6 +51,10 @@ namespace Backend_Project.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ReportType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -81,6 +85,13 @@ namespace Backend_Project.Migrations
                     b.HasBaseType("Backend_Project.Models.Report");
 
                     b.HasDiscriminator().HasValue("EntertainmentAndArt");
+                });
+
+            modelBuilder.Entity("Backend_Project.Models.ReportHealth", b =>
+                {
+                    b.HasBaseType("Backend_Project.Models.Report");
+
+                    b.HasDiscriminator().HasValue("Health");
                 });
 
             modelBuilder.Entity("Backend_Project.Models.ReportPolitics", b =>

@@ -17,8 +17,16 @@ namespace Backend_Project.Services
         }
         public Report CreateReport(Report report)
         {
-            throw new System.NotImplementedException();
+            if (report == null)
+            {
+                throw new ArgumentNullException(nameof(Report));
+            }
+            _context.Add(report);
+            SaveChanges();
+            return report;
         }
+
+
 
         public Report DeleteReport(int id)
         {
@@ -44,7 +52,7 @@ namespace Backend_Project.Services
 
         public bool SaveChanges()
         {
-            return _context.SaveChanges() > 0;
+            return (_context.SaveChanges() > 0);
         }
 
         public Report UpdateReport(Report report)
