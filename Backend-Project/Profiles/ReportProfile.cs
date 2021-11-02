@@ -11,6 +11,7 @@ namespace Backend_Project.Profiles
         {
             CreateMap<Report, ReportReadDtos>();
             CreateMap<ReportCreateDtos, Report>();
+            CreateMap<ReportUpdateDtos, Report>();
         }
     }
     

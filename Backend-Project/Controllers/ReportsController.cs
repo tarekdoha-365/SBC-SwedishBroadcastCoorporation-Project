@@ -54,10 +54,19 @@ namespace Backend_Project.Controllers
         {
 
             var reportModel = _mapper.Map<Report>(reportCreateDtos);
-            var CreateReport = _reportRepo.CreateReport(reportModel);
+            var createReport = _reportRepo.CreateReport(reportModel);
             _reportRepo.SaveChanges();
-            var reportReadDto = _mapper.Map<ReportReadDtos>(reportModel);
-            return CreatedAtRoute(nameof(GetReportById), new { Id = reportReadDto.Id }, reportReadDto);
+            var reportReadDtos = _mapper.Map<ReportReadDtos>(reportModel);
+            return CreatedAtRoute(nameof(GetReportById), new { Id = reportReadDtos.Id }, reportReadDtos);
+        }
+        [HttpPut]
+        public ActionResult<ReportReadDtos> UpdateReport(ReportUpdateDtos reportUpdateDtos)
+        {
+            var reportModel = _mapper.Map<Report>(reportUpdateDtos);
+            var updateReport = _reportRepo.UpdateReport(reportModel);
+            _reportRepo.SaveChanges();
+            var reportReadDtos = _mapper.Map<ReportReadDtos>(reportModel);
+            return Ok(_mapper.Map<ReportReadDtos>(updateReport));
         }
     }
 }

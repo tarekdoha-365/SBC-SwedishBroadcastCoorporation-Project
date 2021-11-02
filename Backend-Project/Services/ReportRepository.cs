@@ -25,13 +25,10 @@ namespace Backend_Project.Services
             SaveChanges();
             return report;
         }
-
-
-
         public Report DeleteReport(int id)
         {
             var item = _context.Reports.FirstOrDefault(x => x.Id == id);
-            if (GetReportById(id)!=null)
+            if (GetReportById(id) != null)
             {
                 _context.Remove(item);
                 SaveChanges();
@@ -42,14 +39,12 @@ namespace Backend_Project.Services
 
         public Report GetReportById(int Id)
         {
-            return _context.Reports.FirstOrDefault(x => x.Id == Id);  
+            return _context.Reports.FirstOrDefault(x => x.Id == Id);
         }
-
         public IEnumerable<Report> GetReports(string reportType)
         {
             return _context.Reports.ToList().Where(x => x.ReportType == reportType);
         }
-
         public bool SaveChanges()
         {
             return (_context.SaveChanges() > 0);
@@ -57,7 +52,23 @@ namespace Backend_Project.Services
 
         public Report UpdateReport(Report report)
         {
-            throw new System.NotImplementedException();
+            var existingReport = _context.Reports.Where(x => x.Id.Equals(report.Id)).FirstOrDefault();
+            if (existingReport!=null)
+            {
+                existingReport.Id = report.Id;
+                existingReport.ReportType = report.ReportType;
+                existingReport.Header = report.Header;
+                existingReport.Title = report.Title;
+                existingReport.Description = report.Description;
+                existingReport.Published = report.Published;
+                existingReport.Modified = report.Modified;
+                existingReport.IsExpired = report.IsExpired;
+                existingReport.AuthorName = report.AuthorName;
+                _context.Update(existingReport);
+                SaveChanges();
+                return existingReport;
+            }
+            throw new Exception($"Comment could not be found {report.Id}");
         }
     }
 }
