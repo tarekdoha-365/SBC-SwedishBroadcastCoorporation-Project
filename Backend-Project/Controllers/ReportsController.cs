@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using AutoMapper;
 using Backend_Project.Dtos;
 using Backend_Project.Interfaces;
@@ -47,6 +48,16 @@ namespace Backend_Project.Controllers
                 return Ok(_mapper.Map<ReportReadDtos>(deleteReport));
             }
             return NotFound();
+        }
+        [HttpPost]
+        public ActionResult<ReportReadDtos> CreateReport(ReportCreateDtos reportCreateDtos)
+        {
+
+            var reportModel = _mapper.Map<Report>(reportCreateDtos);
+            var CreateReport = _reportRepo.CreateReport(reportModel);
+            _reportRepo.SaveChanges();
+            var reportReadDto = _mapper.Map<ReportReadDtos>(reportModel);
+            return CreatedAtRoute(nameof(GetReportById), new { Id = reportReadDto.Id }, reportReadDto);
         }
     }
 }

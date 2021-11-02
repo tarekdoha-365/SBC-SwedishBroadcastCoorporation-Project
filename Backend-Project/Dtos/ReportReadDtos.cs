@@ -10,8 +10,8 @@ namespace Backend_Project.Dtos
         public string Title { get; set; }
         public string Description { get; set; }
         public DateTime Published { get; set; }
-         public bool Modified {get; set;}
-         public bool IsExpired { get; set; }
-          public string AuthorName {get;set;}
+        public bool Modified {get; set;}
+        public bool IsExpired { get; set; }
+        public string AuthorName {get;set;}
     }
 }

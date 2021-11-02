@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Backend_Project.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20211029000556_Report")]
+    [Migration("20211102194636_Report")]
     partial class Report
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -53,6 +53,10 @@ namespace Backend_Project.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ReportType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -83,6 +87,13 @@ namespace Backend_Project.Migrations
                     b.HasBaseType("Backend_Project.Models.Report");
 
                     b.HasDiscriminator().HasValue("EntertainmentAndArt");
+                });
+
+            modelBuilder.Entity("Backend_Project.Models.ReportHealth", b =>
+                {
+                    b.HasBaseType("Backend_Project.Models.Report");
+
+                    b.HasDiscriminator().HasValue("Health");
                 });
 
             modelBuilder.Entity("Backend_Project.Models.ReportPolitics", b =>

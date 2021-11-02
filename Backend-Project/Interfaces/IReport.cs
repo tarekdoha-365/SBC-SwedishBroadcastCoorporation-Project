@@ -11,6 +11,5 @@ namespace Backend_Project.Interfaces
        Report CreateReport (Report report);
        bool SaveChanges();
        Report UpdateReport (Report report);
-
     }
 }
