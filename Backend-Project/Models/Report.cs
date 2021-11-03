@@ -24,5 +24,6 @@ namespace Backend_Project.Models
         public bool IsExpired { get; set; }
         [Required]
         public string AuthorName {get;set;}
+        public Image Image { get; set; }
     }
 }
