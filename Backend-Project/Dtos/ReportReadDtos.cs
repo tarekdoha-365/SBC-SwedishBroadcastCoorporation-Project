@@ -13,5 +13,6 @@ namespace Backend_Project.Dtos
         public bool Modified {get; set;}
         public bool IsExpired { get; set; }
         public string AuthorName {get;set;}
+        public string ImagePath { get; set; }
     }
 }

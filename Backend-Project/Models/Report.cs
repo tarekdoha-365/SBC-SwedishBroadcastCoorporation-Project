@@ -1,6 +1,8 @@
 using Backend_Project.Dtos;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Backend_Project.Models
 {
@@ -19,11 +21,12 @@ namespace Backend_Project.Models
         [Required]
         public DateTime Published { get; set; }
         [Required]
-        public bool Modified {get; set;}
+        public bool Modified { get; set; }
         [Required]
         public bool IsExpired { get; set; }
         [Required]
-        public string AuthorName {get;set;}
-        public Image Image { get; set; }
+        public string AuthorName { get; set; }
+        [Required]
+        public string ImagePath { get; set; }
     }
 }

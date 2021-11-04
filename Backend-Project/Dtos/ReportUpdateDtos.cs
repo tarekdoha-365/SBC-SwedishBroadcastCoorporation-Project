@@ -26,5 +26,7 @@ namespace Backend_Project.Dtos
         public bool IsExpired { get; set; }
         [Required]
         public string AuthorName { get; set; }
+        [Required]
+        public string ImagePath { get; set; }
     }
 }
