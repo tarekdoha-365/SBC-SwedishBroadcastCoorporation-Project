@@ -21,6 +21,7 @@ namespace Backend_Project.Migrations
                     Modified = table.Column<bool>(type: "bit", nullable: false),
                     IsExpired = table.Column<bool>(type: "bit", nullable: false),
                     AuthorName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ImagePath = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ReportType0 = table.Column<string>(name: "Report-Type", type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>

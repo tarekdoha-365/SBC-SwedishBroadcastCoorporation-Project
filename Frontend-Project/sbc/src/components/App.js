@@ -1,10 +1,11 @@
 import React from 'react'
-import ReportList from './ReportList'
-import Report from './Report'
+import ReportBusinessList from './BusinessReportList'
+import axios from 'axios'
 export default function App() {
+  
   return (
     <div>
-      <ReportList></ReportList>
+      <ReportBusinessList></ReportBusinessList>
     </div>
   )
 }

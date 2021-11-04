@@ -11,7 +11,9 @@ namespace Backend_Project.Models
         private bool _modified;
         private bool _isExpired;
         private string _authorName;
-        public ReportHealthFactory(string Header, string Title, string Description, DateTime Published, bool Modified, bool IsExpired, string AuthorName)
+        private string _imagePath;
+
+        public ReportHealthFactory(string Header, string Title, string Description, DateTime Published, bool Modified, bool IsExpired, string AuthorName, string ImagePath)
         {
             _header = Header;
             _title = Title;
@@ -20,10 +22,11 @@ namespace Backend_Project.Models
             _modified = Modified;
             _isExpired = IsExpired;
             _authorName = AuthorName;
+            _imagePath = ImagePath;
         }
         public override Report GetReportType()
         {
-            return new ReportBusiness(_header, _title, _description, _published, _modified, _isExpired, _authorName);
+            return new ReportHealth(_header, _title, _description, _published, _modified, _isExpired, _authorName, _imagePath);
         }
     }
 }

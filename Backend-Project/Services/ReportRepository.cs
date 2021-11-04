@@ -39,7 +39,7 @@ namespace Backend_Project.Services
 
         public Report GetReportById(int Id)
         {
-            return _context.Reports.FirstOrDefault(x => x.Id == Id);
+            return _context.Reports.FirstOrDefault(x => x.Id == Id) ;
         }
         public IEnumerable<Report> GetReports(string reportType)
         {
@@ -64,11 +64,12 @@ namespace Backend_Project.Services
                 existingReport.Modified = report.Modified;
                 existingReport.IsExpired = report.IsExpired;
                 existingReport.AuthorName = report.AuthorName;
+                existingReport.ImagePath = report.ImagePath;
                 _context.Update(existingReport);
                 SaveChanges();
                 return existingReport;
             }
-            throw new Exception($"Comment could not be found {report.Id}");
+            throw new Exception($"Report Id could not be found: {report.Id}");
         }
     }
 }

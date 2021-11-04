@@ -19,26 +19,6 @@ namespace Backend_Project.Migrations
                 .HasAnnotation("ProductVersion", "5.0.11")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Backend_Project.Models.Image", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Image");
-                });
-
             modelBuilder.Entity("Backend_Project.Models.Report", b =>
                 {
                     b.Property<int>("Id")
@@ -58,8 +38,9 @@ namespace Backend_Project.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("ImageId")
-                        .HasColumnType("int");
+                    b.Property<string>("ImagePath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsExpired")
                         .HasColumnType("bit");
@@ -84,8 +65,6 @@ namespace Backend_Project.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ImageId");
-
                     b.ToTable("Reports");
 
                     b.HasDiscriminator<string>("Report-Type").HasValue("Report");
@@ -96,64 +75,6 @@ namespace Backend_Project.Migrations
                     b.HasBaseType("Backend_Project.Models.Report");
 
                     b.HasDiscriminator().HasValue("Business");
-                });
-
-            modelBuilder.Entity("Backend_Project.Models.ReportClimate", b =>
-                {
-                    b.HasBaseType("Backend_Project.Models.Report");
-
-                    b.HasDiscriminator().HasValue("Climate");
-                });
-
-            modelBuilder.Entity("Backend_Project.Models.ReportEntertainmentAndArt", b =>
-                {
-                    b.HasBaseType("Backend_Project.Models.Report");
-
-                    b.HasDiscriminator().HasValue("EntertainmentAndArt");
-                });
-
-            modelBuilder.Entity("Backend_Project.Models.ReportHealth", b =>
-                {
-                    b.HasBaseType("Backend_Project.Models.Report");
-
-                    b.HasDiscriminator().HasValue("Health");
-                });
-
-            modelBuilder.Entity("Backend_Project.Models.ReportPolitics", b =>
-                {
-                    b.HasBaseType("Backend_Project.Models.Report");
-
-                    b.HasDiscriminator().HasValue("Politics");
-                });
-
-            modelBuilder.Entity("Backend_Project.Models.ReportScience", b =>
-                {
-                    b.HasBaseType("Backend_Project.Models.Report");
-
-                    b.HasDiscriminator().HasValue("Science");
-                });
-
-            modelBuilder.Entity("Backend_Project.Models.ReportStories", b =>
-                {
-                    b.HasBaseType("Backend_Project.Models.Report");
-
-                    b.HasDiscriminator().HasValue("Stories");
-                });
-
-            modelBuilder.Entity("Backend_Project.Models.ReportTechnology", b =>
-                {
-                    b.HasBaseType("Backend_Project.Models.Report");
-
-                    b.HasDiscriminator().HasValue("Technology");
-                });
-
-            modelBuilder.Entity("Backend_Project.Models.Report", b =>
-                {
-                    b.HasOne("Backend_Project.Models.Image", "Image")
-                        .WithMany()
-                        .HasForeignKey("ImageId");
-
-                    b.Navigation("Image");
                 });
 #pragma warning restore 612, 618
         }

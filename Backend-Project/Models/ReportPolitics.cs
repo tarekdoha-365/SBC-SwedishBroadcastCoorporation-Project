@@ -12,7 +12,8 @@ namespace Backend_Project.Models
         private bool _modified;
         private bool _isExpired;
         private string _authorName;
-        public ReportPolitics(string Header, string Title, string Description, DateTime Published, bool Modified, bool IsExpired, string AuthorName)
+        private string _imagePath;
+        public ReportPolitics(string Header, string Title, string Description, DateTime Published, bool Modified, bool IsExpired, string AuthorName, string ImagePath)
         {
             _reportType = "Politics";
             _header = Header;
@@ -22,6 +23,7 @@ namespace Backend_Project.Models
             _modified = Modified;
             _isExpired = IsExpired;
             _authorName = AuthorName;
+            _imagePath = ImagePath;
         }
     }
 }
