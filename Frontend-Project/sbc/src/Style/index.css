@@ -1,0 +1,14 @@
+div {
+
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+img {
+    opacity: 0.5;
+    width: 500px;
+    height:fit-content;
+}
+.font-link {
+    font-family: 'Zen+Antique', cursive;
+  }
