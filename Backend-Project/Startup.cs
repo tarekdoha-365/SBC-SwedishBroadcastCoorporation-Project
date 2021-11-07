@@ -35,6 +35,8 @@ namespace Backend_Project
                 opt.UseSqlServer(Configuration.GetConnectionString("ReportsConn"))
                 );
             services.AddControllers();
+            services.AddCors(options => options.AddDefaultPolicy(
+                builder => builder.AllowAnyOrigin()));
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddScoped<IReport, ReportRepository>();
             services.AddSwaggerGen(c =>
@@ -48,15 +50,15 @@ namespace Backend_Project
         {
             if (env.IsDevelopment())
             {
+                
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Backend_Project v1"));
             }
 
             //app.UseHttpsRedirection();
-
             app.UseRouting();
-
+            app.UseCors();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
