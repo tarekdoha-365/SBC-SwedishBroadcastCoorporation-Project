@@ -5,6 +5,7 @@ using Backend_Project.Dtos;
 using Backend_Project.Interfaces;
 using Backend_Project.Models;
 using Backend_Project.Services;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Backend_Project.Controllers
