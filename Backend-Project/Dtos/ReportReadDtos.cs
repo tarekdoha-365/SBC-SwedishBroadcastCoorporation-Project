@@ -5,7 +5,7 @@ namespace Backend_Project.Dtos
     public class ReportReadDtos
     {
         public int Id { get; set; }
-        public string ReportType { get; }
+        public string ReportType { get; set; }
         public string Header { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
