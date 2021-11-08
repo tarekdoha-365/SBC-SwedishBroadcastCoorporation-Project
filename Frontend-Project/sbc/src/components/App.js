@@ -1,10 +1,13 @@
 import React from 'react'
-import SearchReport from './SearchReport'
+import SearchReports from './SearchReports'
+import PostReport from './PostReport'
+import "../Style/index.css"
 export default function App() {
   return (
     <div>
-      <SearchReport>
-      </SearchReport>
+      <PostReport/>
+      {/* <SearchReports>
+      </SearchReports> */}
     </div>
   )
 }
