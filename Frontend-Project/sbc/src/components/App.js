@@ -5,9 +5,9 @@ import "../Style/index.css"
 export default function App() {
   return (
     <div>
-      <PostReport/>
-      {/* <SearchReports>
-      </SearchReports> */}
+      {/* <PostReport/> */}
+      <SearchReports>
+      </SearchReports>
     </div>
   )
 }
