@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tj1yvOZdsUv8bpsZKBfGPV+SIuHESAGyWEv18A8zkWMiK9VdGWtvhBwgrgr+oXp7FxWOlhHjz9pskr1cz8x/tQ==",
+  "dgSpecHash": "APLSdIGu98nMwAs9UjN73vmJ0xQS/MnWtbPtZpYKiCQL4HoALoUlKJsBLkM8yDSNwbpmx8B7PLixCMjCzPSB6Q==",
   "success": true,
-  "projectFilePath": "C:\\repos\\SBC-SwedishBroadcastCoorporation-Project\\Backend-Project\\Backend-Project.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\Source\\Repos\\tarekdoha-365\\SBC-SwedishBroadcastCoorporation-Project\\Backend-Project\\Backend-Project.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

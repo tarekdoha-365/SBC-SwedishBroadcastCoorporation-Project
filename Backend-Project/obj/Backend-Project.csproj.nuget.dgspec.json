@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\repos\\SBC-SwedishBroadcastCoorporation-Project\\Backend-Project\\Backend-Project.csproj": {}
+    "C:\\Users\\DELL\\Source\\Repos\\tarekdoha-365\\SBC-SwedishBroadcastCoorporation-Project\\Backend-Project\\Backend-Project.csproj": {}
   },
   "projects": {
-    "C:\\repos\\SBC-SwedishBroadcastCoorporation-Project\\Backend-Project\\Backend-Project.csproj": {
+    "C:\\Users\\DELL\\Source\\Repos\\tarekdoha-365\\SBC-SwedishBroadcastCoorporation-Project\\Backend-Project\\Backend-Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repos\\SBC-SwedishBroadcastCoorporation-Project\\Backend-Project\\Backend-Project.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\Source\\Repos\\tarekdoha-365\\SBC-SwedishBroadcastCoorporation-Project\\Backend-Project\\Backend-Project.csproj",
         "projectName": "Backend-Project",
-        "projectPath": "C:\\repos\\SBC-SwedishBroadcastCoorporation-Project\\Backend-Project\\Backend-Project.csproj",
+        "projectPath": "C:\\Users\\DELL\\Source\\Repos\\tarekdoha-365\\SBC-SwedishBroadcastCoorporation-Project\\Backend-Project\\Backend-Project.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\repos\\SBC-SwedishBroadcastCoorporation-Project\\Backend-Project\\obj\\",
+        "outputPath": "C:\\Users\\DELL\\Source\\Repos\\tarekdoha-365\\SBC-SwedishBroadcastCoorporation-Project\\Backend-Project\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
