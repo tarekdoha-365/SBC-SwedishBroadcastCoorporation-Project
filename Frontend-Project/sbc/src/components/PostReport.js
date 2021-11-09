@@ -9,7 +9,7 @@ export default function PostReport() {
     const [results, SetResults] = useState([])
     console.log(PostInput)
     useEffect(() => {
-     //To be implemented for Next Time
+     
     }, [])
 
   return (
