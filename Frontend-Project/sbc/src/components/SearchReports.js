@@ -3,7 +3,7 @@ import axios from 'axios'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import Container from '@material-ui/core/Container'
 
-export default function SearchReport() {
+export default function SearchReports() {
   const [searchInput, setSearchInput] = useState('')
   const [results, SetResults] = useState([])
   console.log(results)
