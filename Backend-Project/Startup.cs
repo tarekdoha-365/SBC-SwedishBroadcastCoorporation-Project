@@ -36,7 +36,7 @@ namespace Backend_Project
                 );
             services.AddControllers();
             services.AddCors(options => options.AddDefaultPolicy(
-                builder => builder.AllowAnyOrigin()));
+                builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()));
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddScoped<IReport, ReportRepository>();
             services.AddSwaggerGen(c =>

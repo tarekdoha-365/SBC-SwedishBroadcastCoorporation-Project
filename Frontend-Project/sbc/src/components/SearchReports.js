@@ -6,8 +6,8 @@ import Container from '@material-ui/core/Container'
 export default function SearchReports() {
   const [searchInput, setSearchInput] = useState('')
   const [results, SetResults] = useState([])
-  console.log(results)
-  useEffect(async () => {
+  
+  useEffect(() => {
     const search = async () => {
       const { data } = await axios.get('https://localhost:44335/api/Reports', {
         params: {
@@ -16,6 +16,7 @@ export default function SearchReports() {
       })
 
       SetResults(data)
+      console.log(data)
     }
     search()
   }, [searchInput])
@@ -32,14 +33,7 @@ export default function SearchReports() {
               <br /> {result.reportType} editor
             </h6>
           </span>
-
-          <a
-            target="_blank"
-            className="ui medium image"
-            href="http://google.com"
-          >
-            <img src={result.imagePath} />
-          </a>
+            <img src={result.imagePath} alt=""/>
           <div>
             <h3>{result.title}</h3>
             <p>{result.description}</p>
