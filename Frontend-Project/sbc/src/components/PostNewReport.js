@@ -56,19 +56,7 @@ export default function PostNewReport() {
   useEffect(() => {
     PostMethod()
   }, [])
-
-  // const updateFieldChanged = index => e => {
-  //     console.log("**********UpdateFieldChanged***************")
-  //   console.log('index: ' + index);
-  //   console.log('property name: '+ e.target.name);
-  //   setPostInputs(e.target.value)
-  //   let newArr = [...PostInputs]; // copying the old datas array
-  //   console.log(newArr)
-  //   newArr[index] = e.target.value; // replace e.target.value with whatever you want to change it to
-  //   setPostInputs(newArr);
-  //   console.log(PostInputs)
-  // }
-
+  
   return (
     <form className="ui form" onSubmit={PostMethod}>
       <div className="field">
