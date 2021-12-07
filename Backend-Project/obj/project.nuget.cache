@@ -1,12 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "jUQMQzV8wrpwi3/kFIzkUSfuRRAgB+dHSpnoURSNTDxJgHNoC3e+2uFea7CbPu9QwyJy33ZaxV3sTr7VYnoJLA==",
-=======
-  "dgSpecHash": "APLSdIGu98nMwAs9UjN73vmJ0xQS/MnWtbPtZpYKiCQL4HoALoUlKJsBLkM8yDSNwbpmx8B7PLixCMjCzPSB6Q==",
->>>>>>> master
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\Source\\Repos\\tarekdoha-365\\SBC-SwedishBroadcastCoorporation-Project\\Backend-Project\\Backend-Project.csproj",
+  "projectFilePath": "C:\\repos\\SBC-SwedishBroadcastCoorporation-Project\\Backend-Project\\Backend-Project.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
@@ -122,5 +118,12 @@
     "C:\\Users\\DELL\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\repos\\SBC-SwedishBroadcastCoorporation-Project\\Backend-Project\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

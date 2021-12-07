@@ -6270,11 +6270,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DELL\\Source\\Repos\\tarekdoha-365\\SBC-SwedishBroadcastCoorporation-Project\\Backend-Project\\Backend-Project.csproj",
+      "projectUniqueName": "C:\\repos\\SBC-SwedishBroadcastCoorporation-Project\\Backend-Project\\Backend-Project.csproj",
       "projectName": "Backend-Project",
-      "projectPath": "C:\\Users\\DELL\\Source\\Repos\\tarekdoha-365\\SBC-SwedishBroadcastCoorporation-Project\\Backend-Project\\Backend-Project.csproj",
+      "projectPath": "C:\\repos\\SBC-SwedishBroadcastCoorporation-Project\\Backend-Project\\Backend-Project.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DELL\\Source\\Repos\\tarekdoha-365\\SBC-SwedishBroadcastCoorporation-Project\\Backend-Project\\obj\\",
+      "outputPath": "C:\\repos\\SBC-SwedishBroadcastCoorporation-Project\\Backend-Project\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -6360,5 +6360,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\repos\\SBC-SwedishBroadcastCoorporation-Project\\Backend-Project\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
